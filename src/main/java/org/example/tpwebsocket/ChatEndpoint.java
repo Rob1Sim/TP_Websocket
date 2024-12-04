@@ -27,7 +27,6 @@ public class ChatEndpoint {
     @OnMessage
     public void onMessage(String message, Session session) {
         try {
-            // Parse le message JSON avec Gson
             JsonObject json = JsonParser.parseString(message).getAsJsonObject();
             String type = json.get("type").getAsString();
 
